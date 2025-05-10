@@ -269,7 +269,73 @@ body, html {
 }
 
 /* Adiciona rolagem mesmo sem conteúdo adicional */
-.espaco-scroll {
-    height: 100vh;
-    background-color: #111;
+html {
+  scroll-behavior: smooth;
+}
+
+/* Seção Sobre Nós */
+.secao-sobre-nos {
+  background-color: #111;
+  padding: 80px 40px 250px; /* Aumentado de 150px para 250px */
+  position: relative;
+  overflow: hidden;
+}
+
+
+.texto-sobre-nos {
+  max-width: 900px;
+  margin: 0 auto;
+  font-size: 22px; /* aumentei o texto */
+  line-height: 1.8;
+  color: white;
+}
+
+.texto-sobre-nos h2 {
+  font-family: 'Creepster', cursive;
+  font-size: 52px;
+  color: crimson;
+  margin-bottom: 30px;
+  text-align: center;
+}
+
+/* Freira maior e no canto inferior direito */
+.freira-imagem {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+  width: 350px; /* aumentada */
+  height: auto;
+  border: none;
+  z-index: 1;
+}
+
+/* Rodapé */
+.rodape {
+  background-color: black;
+  text-align: center;
+  padding: 0;
+  margin: 0;
+  z-index: 2;
+  position: relative;
+}
+
+.img-rodape {
+  width: 100%;
+  display: block;
+  margin-top: -5px; /* opcional para evitar espaço branco entre freira e sangue */
+}
+
+
+/* Ícones */
+.icones-rodape {
+  margin-top: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+}
+
+.icones-rodape img {
+  width: 45px;
+  height: 45px;
+  filter: drop-shadow(0 0 5px white); /* ajuda a destacar no fundo escuro */
 }
