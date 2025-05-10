@@ -351,3 +351,119 @@ html {
   color: white;
 }
 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/*Tela mais assistidos*/ 
+body {
+  background-color: black;
+  color: white;
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+}
+
+header {
+  background-color: black;
+  padding: 20px;
+  text-align: center;
+}
+
+header h1 {
+  color: red;
+  font-size: 36px;
+  margin: 0;
+}
+
+nav {
+  margin-top: 10px;
+}
+
+nav a {
+  color: white;
+  margin: 0 10px;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.titulo-assistidos {
+  text-align: center;
+  color: white;
+  margin-top: 40px;
+  font-size: 28px;
+}
+
+main {
+  padding: 20px;
+}
+
+.filme {
+  display: flex;
+  gap: 20px;
+  margin-bottom: 40px;
+  align-items: flex-start;
+}
+
+.filme img {
+  width: 150px;
+  border-radius: 8px;
+}
+
+.filme div {
+  max-width: 700px;
+}
+
+.filme h3 {
+  margin-top: 0;
+  color: white;
+  font-size: 20px;
+}
+
+.rodape {
+  background-color: #cc0000; /* vermelho mais vivo */
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 15px;
+}
+
+.icone-texto {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  margin-left: 10px;
+}
+
+.icone-circular {
+  width: 40px;
+  height: 40px;
+  background-color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  box-shadow: 0 0 10px #000000aa;
+}
+
+.icone-circular img {
+  width: 20px;
+  height: 20px;
+}
+
+.icone-texto span {
+  font-size: 14px;
+  color: white;
+}
