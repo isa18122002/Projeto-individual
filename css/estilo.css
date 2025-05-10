@@ -367,103 +367,43 @@ html {
 
 
 /*Tela mais assistidos*/ 
-body {
-  background-color: black;
-  color: white;
-  font-family: Arial, sans-serif;
-  margin: 0;
-  padding: 0;
-}
-
-header {
-  background-color: black;
-  padding: 20px;
-  text-align: center;
-}
-
-header h1 {
-  color: red;
-  font-size: 36px;
-  margin: 0;
-}
-
-nav {
-  margin-top: 10px;
-}
-
-nav a {
-  color: white;
-  margin: 0 10px;
-  text-decoration: none;
-  font-weight: bold;
+.secao-assistidos {
+  padding: 100px 20px 40px;
+  background-color: #0a0a0a;
 }
 
 .titulo-assistidos {
+  font-family: 'Creepster', cursive;
+  font-size: 36px;
+  color: crimson;
   text-align: center;
-  color: white;
-  margin-top: 40px;
-  font-size: 28px;
+  margin-bottom: 40px;
 }
 
-main {
-  padding: 20px;
+.lista-filmes {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+  max-width: 800px;
+  margin: auto;
 }
 
 .filme {
   display: flex;
+  align-items: center;
   gap: 20px;
-  margin-bottom: 40px;
-  align-items: flex-start;
+  background-color: #1c1c1c;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px crimson;
 }
 
 .filme img {
-  width: 150px;
-  border-radius: 8px;
-}
-
-.filme div {
-  max-width: 700px;
+  width: 120px;
+  border-radius: 5px;
 }
 
 .filme h3 {
-  margin-top: 0;
-  color: white;
-  font-size: 20px;
-}
-
-.rodape {
-  background-color: #cc0000; /* vermelho mais vivo */
-  padding: 20px;
-  display: flex;
-  flex-direction: column;
-  align-items: flex-start;
-  gap: 15px;
-}
-
-.icone-texto {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-left: 10px;
-}
-
-.icone-circular {
-  width: 40px;
-  height: 40px;
-  background-color: black;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  box-shadow: 0 0 10px #000000aa;
-}
-
-.icone-circular img {
-  width: 20px;
-  height: 20px;
-}
-
-.icone-texto span {
-  font-size: 14px;
-  color: white;
+  margin: 0 0 10px;
+  color: crimson;
 }
