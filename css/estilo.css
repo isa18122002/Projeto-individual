@@ -303,32 +303,51 @@ html {
   position: absolute;
   bottom: 0;
   right: 0;
-  width: 350px; /* aumentada */
+  width: 450px; /* aumentada */
   height: auto;
   border: none;
   z-index: 1;
 }
 
-/* Rodapé */
-/* Rodapé */
+/* Rodapé com vermelho vivo */
 .rodape {
-  background-color: crimson;
-  padding: 20px 40px;
+  background-color: rgb(162, 2, 34); /* vermelho mais vivo */
+  padding: 10px 20px;
   color: white;
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   justify-content: flex-start;
 }
 
-/* Ícones alinhados à esquerda */
+/* Container vertical dos ícones e textos */
 .icones-rodape {
   display: flex;
+  flex-direction: column;
   gap: 20px;
 }
 
-.icones-rodape img {
-  width: 40px;
-  height: 40px;
-  filter: drop-shadow(0 0 5px black);
+/* Bloco de cada item com ícone e texto */
+.item-rodape {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+}
+
+/* Ícones redondos menores com fundo preto e sombra vermelha */
+.item-rodape img {
+  width: 38px;
+  height: 38px;
+  border-radius: 50%;
+  background-color: black;
+  padding: 6px;
+  box-shadow: 0 0 20px #b30000;
+  object-fit: contain;
+}
+
+/* Texto ao lado dos ícones */
+.item-rodape span {
+  font-size: 15px;
+  font-weight: bold;
+  color: white;
 }
 
