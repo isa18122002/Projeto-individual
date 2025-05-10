@@ -312,33 +312,23 @@ html {
 /* Rodapé */
 /* Rodapé */
 .rodape {
-  background-color: black;
-  text-align: center;
-  position: relative;
-  padding-top: 30px;
+  background-color: crimson;
+  padding: 20px 40px;
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
 }
 
-.img-rodape {
-  width: 100%;
-  display: block;
-  margin-top: -5px;
-  height: auto;
-  max-height: 100px; /* Reduz para cerca de 1/3 do tamanho original */
-  object-fit: cover;
-}
-
-/* Ícones */
+/* Ícones alinhados à esquerda */
 .icones-rodape {
   display: flex;
-  justify-content: center;
-  gap: 30px;
-  margin-bottom: 20px;
-  position: relative;
-  z-index: 2;
+  gap: 20px;
 }
 
 .icones-rodape img {
-  width: 45px;
-  height: 45px;
-  filter: drop-shadow(0 0 5px white);
+  width: 40px;
+  height: 40px;
+  filter: drop-shadow(0 0 5px black);
 }
+
