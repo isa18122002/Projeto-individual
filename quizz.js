@@ -1,40 +1,110 @@
-document.getElementById('formQuizz').addEventListener('submit', function(event) {
-    event.preventDefault();
+const perguntas = [
+  {
+    pergunta: "Qual é o nome do assassino em 'Pânico'?",
+    opcoes: ["Michael", "Jason", "Ghostface", "Freddy"],
+    resposta: "Ghostface"
+  },
+  {
+    pergunta: "Quem é o vilão em 'Halloween'?",
+    opcoes: ["Michael Myers", "Chucky", "Leatherface", "Hannibal"],
+    resposta: "Michael Myers"
+  },
+  {
+    pergunta: "Em que filme aparece o palhaço Pennywise?",
+    opcoes: ["It: A Coisa", "O Iluminado", "Corra!", "Invocação do Mal"],
+    resposta: "It: A Coisa"
+  },
+  {
+    pergunta: "Qual desses filmes é de terror psicológico?",
+    opcoes: ["O Iluminado", "Chucky", "Pânico", "Atividade Paranormal"],
+    resposta: "O Iluminado"
+  },
+  {
+    pergunta: "Em que filme uma boneca chamada Annabelle aparece?",
+    opcoes: ["Invocação do Mal", "Chucky", "Jogos Mortais", "It: A Coisa"],
+    resposta: "Invocação do Mal"
+  },
+  {
+    pergunta: "Quem dirige 'O Iluminado'?",
+    opcoes: ["Stanley Kubrick", "Wes Craven", "John Carpenter", "James Wan"],
+    resposta: "Stanley Kubrick"
+  },
+  {
+    pergunta: "Qual é o vilão de 'A Hora do Pesadelo'?",
+    opcoes: ["Freddy Krueger", "Jason", "Pennywise", "Billy"],
+    resposta: "Freddy Krueger"
+  },
+  {
+    pergunta: "Onde se passa 'Massacre da Serra Elétrica'?",
+    opcoes: ["Texas", "Louisiana", "Ohio", "Flórida"],
+    resposta: "Texas"
+  },
+  {
+    pergunta: "Qual é o nome da entidade em 'Hereditário'?",
+    opcoes: ["Paimon", "Baphomet", "Azazel", "Lilith"],
+    resposta: "Paimon"
+  },
+  {
+    pergunta: "Qual desses é um filme de Jordan Peele?",
+    opcoes: ["Corra!", "Sobrenatural", "Annabelle", "Halloween Ends"],
+    resposta: "Corra!"
+  }
+];
 
-    const respostasCorretas = {
-        q1: 'c',
-        q2: 'a',
-        q3: 'b',
-        q4: 'b',
-        q5: 'a',
-        q6: 'c',
-        q7: 'b',
-        q8: 'a',
-        q9: 'b',
-        q10: 'c'
-    };
+let perguntaAtual = 0;
+let pontuacao = 0;
 
-    let pontuacao = 0;
+function mostrarPergunta() {
+  const pergunta = perguntas[perguntaAtual];
+  const questionEl = document.getElementById("question");
+  const optionsEl = document.getElementById("options");
 
-    for (let i = 1; i <= 10; i++) {
-        const resposta = document.querySelector(`input[name="q${i}"]:checked`);
-        if (resposta && resposta.value === respostasCorretas[`q${i}`]) {
-            pontuacao++;
-        }
-    }
+  questionEl.textContent = pergunta.pergunta;
+  optionsEl.innerHTML = "";
 
-    const resultado = document.getElementById('resultado');
-    let mensagem = `<p>Você acertou ${pontuacao} de 10 perguntas!</p>`;
+  pergunta.opcoes.forEach(opcao => {
+    const botao = document.createElement("button");
+    botao.textContent = opcao;
+    botao.onclick = () => verificarResposta(opcao);
+    optionsEl.appendChild(botao);
+  });
+}
 
-    if (pontuacao === 10) {
-        mensagem += "<p>🎃 Mestre do terror! Você conhece todos os cantos sombrios do cinema!</p>";
-    } else if (pontuacao >= 7) {
-        mensagem += "<p>👻 Muito bem! Você está pronto para uma maratona assustadora!</p>";
-    } else if (pontuacao >= 4) {
-        mensagem += "<p>😱 Você conhece um pouco, mas ainda tem pesadelos para enfrentar!</p>";
-    } else {
-        mensagem += "<p>💀 Hora de assistir mais filmes… o medo te espera.</p>";
-    }
+function verificarResposta(resposta) {
+  const respostaCorreta = perguntas[perguntaAtual].resposta;
+  if (resposta === respostaCorreta) {
+    pontuacao++;
+  }
+  document.getElementById("next-button").style.display = "block";
+}
 
-    resultado.innerHTML = mensagem;
+document.getElementById("next-button").addEventListener("click", () => {
+  perguntaAtual++;
+  if (perguntaAtual < perguntas.length) {
+    document.getElementById("next-button").style.display = "none";
+    mostrarPergunta();
+  } else {
+    mostrarResultado();
+  }
 });
+
+function mostrarResultado() {
+  document.getElementById("quiz").style.display = "none";
+  document.getElementById("result-container").style.display = "block";
+  document.getElementById("score").textContent = `Você acertou ${pontuacao} de ${perguntas.length} perguntas.`;
+}
+
+function reiniciarQuizz() {
+  perguntaAtual = 0;
+  pontuacao = 0;
+  document.getElementById("result-container").style.display = "none";
+  document.getElementById("quiz").style.display = "block";
+  mostrarPergunta();
+  document.getElementById("next-button").style.display = "none";
+}
+
+// Inicializa o quizz ao carregar a página
+window.onload = function () {
+  mostrarPergunta();
+  document.getElementById("next-button").style.display = "none";
+};

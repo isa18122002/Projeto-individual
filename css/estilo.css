@@ -421,3 +421,59 @@ html {
   font-size: 22px;
   font-weight: bold;
 }
+
+
+/*Pagina quizz*/
+.quizz-container {
+  max-width: 600px;
+  margin: 140px auto 40px;
+  padding: 30px;
+  background-color: #1c1c1c;
+  border-radius: 15px;
+  box-shadow: 0 0 20px #b30000;
+  text-align: center;
+}
+
+#question {
+  font-size: 20px;
+  margin-bottom: 20px;
+}
+
+#options button {
+  display: block;
+  width: 100%;
+  margin: 10px 0;
+  padding: 10px;
+  background-color: #333;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+  transition: background-color 0.3s;
+}
+
+#options button:hover {
+  background-color: #ff0000;
+}
+
+#next-button,
+#result-container button {
+  margin-top: 20px;
+  padding: 12px 25px;
+  font-size: 16px;
+  background-color: #ff0000;
+  border: none;
+  border-radius: 10px;
+  color: white;
+  cursor: pointer;
+}
+
+#next-button:hover,
+#result-container button:hover {
+  background-color: #cc0000;
+}
+
+h1, h2 {
+  color: crimson;
+  font-family: 'Creepster', cursive;
+}
