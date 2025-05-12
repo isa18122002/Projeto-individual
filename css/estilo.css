@@ -367,43 +367,73 @@ html {
 
 
 /*Tela mais assistidos*/ 
-.secao-assistidos {
-  padding: 100px 20px 40px;
-  background-color: #0a0a0a;
-}
-
-.titulo-assistidos {
-  font-family: 'Creepster', cursive;
-  font-size: 36px;
-  color: crimson;
-  text-align: center;
-  margin-bottom: 40px;
-}
-
-.lista-filmes {
+/* Cabeçalho e navegação padrão */
+.container-menu {
   display: flex;
-  flex-direction: column;
-  gap: 30px;
-  max-width: 800px;
-  margin: auto;
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #000;
+}
+
+.logo {
+  font-family: 'Creepster', cursive;
+  font-size: 28px;
+  color: crimson;
+}
+
+nav a {
+  color: white;
+  margin: 0 15px;
+  text-decoration: none;
+  font-weight: bold;
+  font-family: Arial, sans-serif;
+}
+
+nav a:hover,
+nav .ativo {
+  color: crimson;
+  text-decoration: underline;
+}
+
+/* Seção de assistidos */
+.secao-assistidos {
+  background-color: #000;
+  padding: 40px 20px;
+}
+
+.faixa-assistidos {
+  border: 2px solid white;
+  color: white;
+  font-size: 20px;
+  text-align: center;
+  width: fit-content;
+  margin: 0 auto 40px;
+  padding: 10px 20px;
+  font-family: Arial, sans-serif;
 }
 
 .filme {
   display: flex;
-  align-items: center;
+  align-items: flex-start;
   gap: 20px;
-  background-color: #1c1c1c;
-  padding: 20px;
-  border-radius: 10px;
-  box-shadow: 0 0 10px crimson;
+  margin-bottom: 40px;
 }
 
 .filme img {
-  width: 120px;
+  width: 180px;
   border-radius: 5px;
 }
 
 .filme h3 {
+  color: white;
+  font-size: 20px;
   margin: 0 0 10px;
-  color: crimson;
+}
+
+.filme p {
+  color: white;
+  font-size: 14px;
+  max-width: 600px;
+  line-height: 1.4;
 }
