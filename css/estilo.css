@@ -312,10 +312,6 @@ html {
 
 /* Rodapé com vermelho vivo */
 .rodape {
-  position: fixed;
-  bottom: 0;
-  left: 0;
-  width: 100%;
   background-color: rgb(162, 2, 34);
   padding: 6px 12px;
   color: white;
@@ -323,8 +319,10 @@ html {
   align-items: center;
   justify-content: center;
   height: 45px;
-  z-index: 100;
+  width: 100%;
+  margin-top: 80px; /* Espaço antes do rodapé */
 }
+
 
 /* Container dos ícones horizontal */
 .icones-rodape {
