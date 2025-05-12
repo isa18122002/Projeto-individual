@@ -421,3 +421,17 @@ html {
   line-height: 1.5;
   color: #ddd;
 }
+
+
+/*Pagina indicados*/
+.nota-filme {
+  font-family: 'Creepster', cursive;
+  font-size: 20px;
+  margin: 10px 0;
+  color: crimson;
+}
+
+.destaque-nota {
+  font-size: 22px;
+  font-weight: bold;
+}
