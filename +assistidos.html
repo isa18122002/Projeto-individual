@@ -1,3 +1,5 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
 <head>
   <meta charset="UTF-8">
   <title>+Assistidos | Clube do Medo</title>
@@ -5,47 +7,66 @@
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
 </head>
 <body>
-  <header>
-    <div class="container-menu">
-      <h1 class="logo">CLUBE DO MEDO</h1>
-      <nav>
-        <a href="index.html">Home</a>
-        <a href="sobre.html">Sobre nós</a>
-        <a class="ativo" href="assistidos.html">+ Assistidos</a>
-        <a href="indicados.html">Indicados</a>
-        <a href="personagens.html">Personagens</a>
-        <a href="login.html">Login</a>
-      </nav>
+
+  <!-- Menu -->
+  <div class="menu">
+    <h1 class="titulo-site">Clube do Medo</h1>
+    <ul>
+      <li><a href="index.html">Home</a></li>
+      <li><a href="sobre.html">Sobre Nós</a></li>
+      <li><a href="mais-assistidos.html" class="ativo">+Assistidos</a></li>
+      <li><a href="indicados.html">Indicados</a></li>
+      <li><a href="personagens.html">Personagens</a></li>
+      <li><a href="quizz.html">Quizz</a></li>
+      <li><a href="login.html">Login</a></li>
+    </ul>
+  </div>
+
+  <!-- Seção de Filmes -->
+  <section class="mais-assistidos">
+    <h2>Os Filmes Mais Assistidos</h2>
+    <div class="filmes-grid">
+
+      <div class="filme-card">
+        <img src="img/psicose.jpg" alt="Psicose">
+        <h3>Psicose</h3>
+        <p>Um clássico do suspense. Marion Crane, após roubar dinheiro, se refugia em um motel administrado por Norman Bates. O filme é famoso por sua reviravolta chocante e a icônica cena do chuveiro.</p>
+      </div>
+
+      <div class="filme-card">
+        <img src="img/o-exorcista.jpg" alt="O Exorcista">
+        <h3>O Exorcista</h3>
+        <p>Linda Blair interpreta uma garota possuída por uma entidade demoníaca. Cenas intensas e o confronto entre bem e mal fazem deste um dos filmes mais assustadores da história.</p>
+      </div>
+
+      <div class="filme-card">
+        <img src="img/o-iluminado.jpg" alt="O Iluminado">
+        <h3>O Iluminado</h3>
+        <p>Jack Torrance enlouquece enquanto cuida de um hotel isolado. Influenciado por forças sobrenaturais, o filme é marcado pela atmosfera tensa e a atuação icônica de Jack Nicholson.</p>
+      </div>
+
+      <div class="filme-card">
+        <img src="img/chucky.jpg" alt="Chucky">
+        <h3>Chucky</h3>
+        <p>Charles Lee Ray transfere sua alma para um boneco. Ao chegar nas mãos de um garoto, Chucky inicia uma onda de mortes com sua mistura de horror e humor característicos.</p>
+      </div>
+
     </div>
-  </header>
+  </section>
 
-  <main class="secao-assistidos">
-    <div class="faixa-assistidos">+ASSISTIDOS</div>
-
-    <section class="filme">
-      <img src="psicose.png" alt="Psicose">
-      <div>
-        <h3>PSICOSE</h3>
-        <p>Um clássico do suspense, a trama segue Marion Crane, que, após roubar uma grande quantia de dinheiro, se refugia em um motel administrado por Norman Bates. O filme é conhecido por sua reviravolta chocante e pela icônica cena do chuveiro, sendo um marco no gênero de terror psicológico.</p>
+  <!-- Rodapé -->
+  <footer class="rodape">
+    <div class="icones-rodape">
+      <div class="item-rodape">
+        <img src="img/icone_instagram.png" alt="Instagram">
+        <span>@CLUBE_DO_MEDO</span>
       </div>
-    </section>
-
-    <section class="filme">
-      <img src="exorcista.png" alt="O Exorcista">
-      <div>
-        <h3>O EXORCISTA</h3>
-        <p>Um clássico do terror sobre exorcismo, conta a história de Linda Blair, com cenas intensas e temas sobre a luta entre o bem e o mal, o filme é considerado um dos mais assustadores da história do cinema.</p>
+      <div class="item-rodape">
+        <img src="img/icone_suporte.png" alt="Suporte">
+        <span>Fale conosco...se tiver coragem!</span>
       </div>
-    </section>
+    </div>
+  </footer>
 
-    <section class="filme">
-      <img src="iluminado.png" alt="O Iluminado">
-      <div>
-        <h3>O ILUMINADO</h3>
-        <p>Baseado no livro de Stephen King, descreve a história de Jack Torrance, um escritor que passa a trabalhar como zelador, porém perde sua sanidade mental, influenciado por forças sobrenaturais. Famoso por sua atmosfera tensa e pela performance de Jack Nicholson.</p>
-      </div>
-    </section>
-
-    <section class="filme">
-      <img src="chucky.png" alt="O Brinquedo Assassino">
-      <div>
+</body>
+</html>
