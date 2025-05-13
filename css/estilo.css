@@ -482,3 +482,57 @@ h1, h2 {
   color: crimson;
   font-family: 'Creepster', cursive;
 }
+
+
+
+
+
+
+/* dashboard.css */
+
+.dashboard-container {
+  max-width: 900px;
+  margin: 0 auto;
+  padding: 20px;
+  background-color: #111;
+  color: white;
+  font-family: Arial, sans-serif;
+}
+
+.kpis {
+  display: flex;
+  justify-content: space-around;
+  margin-bottom: 40px;
+}
+
+.kpi {
+  text-align: center;
+  padding: 20px;
+  border-radius: 10px;
+  width: 150px;
+  box-shadow: 0 0 10px rgba(255, 255, 255, 0.2);
+}
+
+.kpi.acertos {
+  background-color: #144d26;
+}
+
+.kpi.erros {
+  background-color: #5c1a1a;
+}
+
+.kpi h2 {
+  margin-bottom: 10px;
+  font-size: 20px;
+}
+
+.kpi p {
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.grafico {
+  width: 100%;
+  max-width: 500px;
+  margin: 0 auto;
+}
