@@ -44,13 +44,13 @@ body {
     padding: 8px 12px;
     font-weight: bold;
     font-size: 16px;
-    background-color: rgba(0, 0, 0, 0.3); /* Cor de fundo com 30% de opacidade */
+    background-color: rgba(0, 0, 0, 0.3); 
     transition: background-color 0.3s ease;
 }
 
 .menu ul li a:hover,
 .menu ul li a.ativo {
-    background-color: rgba(255, 0, 0, 0.5); /* Vermelho com 50% de opacidade */
+    background-color: rgba(255, 0, 0, 0.5); 
     border-radius: 5px;
 }
 
@@ -256,7 +256,7 @@ body, html {
     display: flex;
     justify-content: center;
     align-items: flex-end;
-    margin-top: 100px; /* espaço para não cobrir o menu fixo */
+    margin-top: 100px; 
 }
 
 .legenda-banner {
@@ -269,7 +269,7 @@ body, html {
     width: 100%;
 }
 
-/* Adiciona rolagem mesmo sem conteúdo adicional */
+
 html {
   scroll-behavior: smooth;
 }
@@ -277,7 +277,7 @@ html {
 /* Seção Sobre Nós */
 .secao-sobre-nos {
   background-color: #111;
-  padding: 80px 40px 250px; /* Aumentado de 150px para 250px */
+  padding: 80px 40px 250px; 
   position: relative;
   overflow: hidden;
 }
@@ -286,7 +286,7 @@ html {
 .texto-sobre-nos {
   max-width: 900px;
   margin: 0 auto;
-  font-size: 22px; /* aumentei o texto */
+  font-size: 22px; 
   line-height: 1.8;
   color: white;
 }
@@ -299,7 +299,7 @@ html {
   text-align: center;
 }
 
-/* Freira maior e no canto inferior direito */
+
 .freira-imagem {
   position: absolute;
   bottom: 0;
