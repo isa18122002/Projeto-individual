@@ -1,55 +1,54 @@
-<!-- dashboard.html -->
 <!DOCTYPE html>
-<html lang="pt-BR">
+<html lang="pt-br">
+
 <head>
   <meta charset="UTF-8">
-  <title>Dashboard | Clube do Medo</title>
-  <link rel="stylesheet" href="css/estilo.css">
-  <link rel="stylesheet" href="css/dashboard.css">
+  <title>Dashboard - Clube do Medo</title>
   <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
-  <script src="js/dashboard.js" defer></script>
+  <link rel="stylesheet" href="./css/dashboard.css">
 </head>
+
 <body>
-  <div class="menu">
-    <h1 class="titulo-site">Clube do Medo</h1>
-    <ul>
-      <li><a href="index.html">Home</a></li>
-      <li><a href="sobre.html">Sobre Nós</a></li>
-      <li><a href="mais-assistidos.html">+Assistidos</a></li>
-      <li><a href="indicados.html">Indicados</a></li>
-      <li><a href="personagens.html">Personagens</a></li>
-      <li><a href="quizz.html">Quizz</a></li>
-      <li><a href="login.html">Login</a></li>
-      <li><a href="dashboard.html" class="ativo">Dashboard</a></li>
-    </ul>
-  </div>
+  <div class="container">
+    <div class="sidebar">
+      <h1 class="titulo-site">Clube do Medo</h1>
 
-  <div class="quizz-container" style="margin-top: 140px;">
-    <h1>Seu Desempenho</h1>
-    <div class="kpis" id="kpis"></div>
-
-    <h2 class="grafico-titulo">Acertos vs Erros</h2>
-    <canvas id="graficoTotal" width="400" height="220"></canvas>
-
-    <h2 class="grafico-titulo">Pergunta Mais Errada</h2>
-    <canvas id="graficoMaisErros" width="400" height="220"></canvas>
-
-    <h2 class="grafico-titulo">Pergunta Mais Acertada</h2>
-    <canvas id="graficoMaisAcertos" width="400" height="220"></canvas>
-  </div>
-
-  <footer class="rodape">
-    <div class="icones-rodape">
-      <div class="item-rodape">
-        <img src="img/icone_instagram.png" alt="Instagram">
-        <span>@CLUBE_DO_MEDO</span>
+      <div class="menu-botoes">
+        <a href="dashboard.html">
+          <button class="botao-menu">Dashboard</button>
+        </a>
+        <a href="quizz.html">
+          <button class="botao-menu">Quiz</button>
+        </a>
       </div>
-      <div class="item-rodape">
-        <img src="img/icone_suporte.png" alt="Suporte">
-        <span>Fale conosco...se tiver coragem!</span>
+
+      <div class="sair">
+        <a href="index.html">
+          <button class="botao-sair">Sair</button>
+        </a>
       </div>
     </div>
-  </footer>
+
+    <div class="conteudo-dashboard">
+      <div class="grafico-container" >
+        <canvas id="grafico"></canvas>
+      </div>
+    </div>
+  </div>
 </body>
+<style>
+
+.grafico-container {
+    background-color: #000000d1;
+    border: 2px solid white;
+    padding: 20px;
+    border-radius: 10px;
+    width: 40vw;
+  }
+
+</style>
+
 </html>
+
+<script src="./js/dashboard.js"></script>
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>

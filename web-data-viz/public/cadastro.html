@@ -1,12 +1,14 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
     <meta charset="UTF-8">
     <title>Cadastro | Clube do Medo</title>
     <link rel="stylesheet" href="css/estilo.css">
     <link href="https://fonts.googleapis.com/css2?family=Creepster&display=swap" rel="stylesheet">
-    <script src="js/cadastro.js" defer></script>
+    <script src="js/cadastro.js"></script>
 </head>
+
 <body>
 
     <div class="menu">
@@ -17,40 +19,47 @@
             <li><a href="mais-assistidos.html">+Assistidos</a></li>
             <li><a href="indicados.html">Indicados</a></li>
             <li><a href="personagens.html">Personagens</a></li>
-            <li><a href="quizz.html">Quizz</a></li>
             <li><a href="login.html">Login</a></li>
         </ul>
     </div>
 
     <div class="container-login" style="margin-bottom: 80px;">
         <h1 class="titulo-login">CADASTRO</h1>
-        <form onsubmit="return validarCadastro()">
+        <div>
+            <select id="select_personagem">
+                <option value="#" selected disabled>Selecione seu personagem favorito</option>
+                <option value="1">Leatherface</option>
+                <option value="2">Jason Voorhees</option>
+                <option value="3">Michael Myers</option>
+                <option value="4">Freddy Krueger</option>
+            </select> <br>
+
             <label for="nome">Nome:</label>
-            <input type="text" id="nome" placeholder="Digite seu nome" required>
+            <input type="text" id="nome" placeholder="Digite seu nome">
 
             <label for="sobrenome">Sobrenome:</label>
-            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome" required>
+            <input type="text" id="sobrenome" placeholder="Digite seu sobrenome">
 
             <label for="telefone">Telefone:</label>
-            <input type="text" id="telefone" placeholder="Digite seu telefone (11 dígitos)" required>
+            <input type="text" id="telefone" placeholder="Digite seu telefone (11 dígitos)">
 
             <label for="email">E-mail:</label>
-            <input type="email" id="email" placeholder="Digite seu e-mail" required>
+            <input type="email" id="email" placeholder="Digite seu e-mail">
 
             <label for="senha">Senha:</label>
-            <input type="password" id="senha" placeholder="Digite sua senha" required>
+            <input type="password" id="senha" placeholder="Digite sua senha">
 
             <label for="confirmaSenha">Confirme a Senha:</label>
-            <input type="password" id="confirmaSenha" placeholder="Confirme sua senha" required>
+            <input type="password" id="confirmaSenha" placeholder="Confirme sua senha">
 
-            <button type="submit">Cadastrar</button>
+            <button onclick="validarCadastro()">Cadastrar</button>
 
             <div id="mensagemErro" class="erro"></div>
             <p class="link-cadastro">Já tem conta? <a href="login.html">Faça login aqui</a></p>
-        </form>
+        </div>
     </div>
 
-   
+
     <footer class="rodape">
         <div class="icones-rodape">
             <div class="item-rodape">
@@ -65,4 +74,7 @@
     </footer>
 
 </body>
+
 </html>
+
+<script src="./js/cadastro.js"></script>

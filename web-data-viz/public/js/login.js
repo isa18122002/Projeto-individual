@@ -5,25 +5,71 @@ function validarLogin() {
 
     mensagemErro.innerHTML = "";
 
-    var erros = [];
-
-    const emailsCadastrados = ['usuario1@exemplo.com', 'usuario2@exemplo.com', 'usuario3@exemplo.com'];
+    let tentativasRestantes = 3;
 
     if (!/^[^\s@]+@[^\s@]+\.[^\s@]+$/.test(email)) {
-        erros.push("Digite um e-mail válido.");
-    } else if (!emailsCadastrados.includes(email)) {
-        erros.push("Este e-mail não está cadastrado.");
+        mensagemErro.innerHTML = "Digite um e-mail válido.";
+        return;
+    }else{
+
+         fetch("/usuarios/autenticar", {
+                method: "POST",
+                headers: {
+                    "Content-Type": "application/json"
+                },
+                body: JSON.stringify({
+                    emailServer: email,
+                    senhaServer: senha
+                })
+            }).then(function (resposta) {
+                console.log("ESTOU NO THEN DO entrar()!")
+
+                if (resposta.ok) {
+                    console.log(resposta);
+
+                    resposta.json().then(json => {
+                        console.log(json);
+                        console.log(JSON.stringify(json));
+                        sessionStorage.EMAIL_USUARIO = json.email;
+                        sessionStorage.NOME_USUARIO = json.nome;
+                        sessionStorage.ID_USUARIO = json.idUsuario;
+                        sessionStorage.FK_PERSONAGEM = json.fkPersonagem;
+                        
+                        mensagemErro.innerHTML = `Login realizado com sucesso!`;
+
+                        setTimeout(function () {
+                            window.location = "quizz.html";
+                        }, 1000); // apenas para exibir o loading
+
+                    });
+
+                } else {
+
+                    console.log("Houve um erro ao tentar realizar o login!");
+
+                    tentativasRestantes--;
+
+                    if (tentativasRestantes > 0) {
+                        mensagemErro.innerHTML = `Email ou senha incorretos! Você ainda tem ${tentativasRestantes} tentativa(s).`;
+                        mensagemErro.style.color = "red";
+                    } else {
+                        mensagemErro.innerHTML = "Você errou 3 vezes. Acesso bloqueado.";
+                        btnEntrar.disabled = true;
+                        btnEntrar.style.opacity = "0.5";
+                        btnEntrar.style.cursor = "not-allowed";
+                    }
+
+                    resposta.text().then(texto => {
+                        console.error(texto);
+                    });
+                }
+
+            }).catch(function (erro) {
+                console.log(erro);
+            })
+
+            return false;
     }
 
-    if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(senha)) {
-        erros.push("A senha deve ter pelo menos 8 caracteres, com letra maiúscula, minúscula, número e caractere especial.");
-    }
-
-    if (erros.length > 0) {
-        mensagemErro.innerHTML = erros.join("<br>");
-        return false;
-    }
-
-    alert("Login bem-sucedido!");
-    return true;
+    
 }

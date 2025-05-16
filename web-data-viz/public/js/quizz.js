@@ -67,7 +67,7 @@ function mostrarPergunta() {
     botao.textContent = opcao;
     botao.onclick = () => verificarResposta(opcao);
     optionsEl.appendChild(botao);
-  });
+  }); 
 }
 
 function verificarResposta(resposta) {
@@ -92,6 +92,31 @@ function mostrarResultado() {
   document.getElementById("quiz").style.display = "none";
   document.getElementById("result-container").style.display = "block";
   document.getElementById("score").textContent = `Você acertou ${pontuacao} de ${perguntas.length} perguntas.`;
+
+  var fkUsuario = sessionStorage.ID_USUARIO;
+
+  fetch("/quiz/inserirPontuacao", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify({
+          pontuacaoServer: pontuacao,
+          fkUsuarioServer: fkUsuario
+        }),
+      })
+        .then(response => {
+          if (!response.ok) {
+            return response.text().then(texto => {
+              console.error("Erro na resposta do backend:", texto);
+            });
+          } else {
+            console.log("Requisição bem-sucedida");
+          }
+        })
+        .catch(erro => {
+          console.error("Erro na requisição:", erro);
+        });
 }
 
 function reiniciarQuizz() {

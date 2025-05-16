@@ -17,29 +17,28 @@
             <li><a href="mais-assistidos.html">+Assistidos</a></li>
             <li><a href="indicados.html">Indicados</a></li>
             <li><a href="personagens.html">Personagens</a></li>
-            <li><a href="quizz.html">Quizz</a></li>
             <li><a href="login.html" class="ativo">Login</a></li>
         </ul>
     </div>
 
     <div class="container-login" style="margin-bottom: 80px;">
         <h1 class="titulo-login">LOGIN</h1>
-        <form onsubmit="return validarLogin()">
+        <div>
             <label for="email">E-mail:</label>
             <input type="email" id="email" placeholder="Digite seu e-mail" required>
 
             <label for="senha">Senha:</label>
             <input type="password" id="senha" placeholder="Digite sua senha" required>
 
-            <button type="submit">Entrar</button>
+            <button id="btnEntrar" onclick="validarLogin()">Entrar</button>
 
             <div id="mensagemErro" class="erro"></div>
             <p class="link-cadastro">Ainda não tem conta? <a href="cadastro.html">Cadastre-se aqui</a></p>
-        </form>
+        </div>
     </div>
 
     
-    <footer class="rodape">
+    <footer class="rodape" style="position: fixed; bottom: 0;">
     <div class="icones-rodape">
       <div class="item-rodape">
         <img src="img/icone_instagram.png" alt="Instagram">
