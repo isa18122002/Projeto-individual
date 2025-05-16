@@ -4,6 +4,7 @@ function validarCadastro() {
     var telefone = document.getElementById('telefone').value.trim();
     var email = document.getElementById('email').value.trim();
     var senha = document.getElementById('senha').value;
+    var confirmaSenha = document.getElementById('confirmaSenha').value;
     var mensagemErro = document.getElementById('mensagemErro');
 
     mensagemErro.innerHTML = "";
@@ -23,6 +24,12 @@ function validarCadastro() {
 
     if (!/^(?=.*[a-z])(?=.*[A-Z])(?=.*\d)(?=.*[\W_]).{8,}$/.test(senha)) {
         erros.push("A senha deve ter pelo menos 8 caracteres, incluindo letra maiúscula, minúscula, número e caractere especial.");
+    }
+
+    if (confirmaSenha === "") {
+        erros.push("A confirmação de senha não pode ficar vazia.");
+    } else if (senha !== confirmaSenha) {
+        erros.push("As senhas não conferem.");
     }
 
     if (erros.length > 0) {
