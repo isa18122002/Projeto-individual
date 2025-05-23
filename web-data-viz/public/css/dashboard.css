@@ -137,3 +137,19 @@ h1, h2 {
 p{
     color: white;
 }
+
+.grafico-container {
+    background-color: #000000d1;
+    padding: 30px;
+    border-radius: 15px;
+    box-shadow: 0 0 20px #b30000;
+    width: 40vw;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 140px auto 40px;
+    height: 45vh;
+  }
+  
+
