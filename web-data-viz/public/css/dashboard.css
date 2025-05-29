@@ -76,6 +76,9 @@ body {
     flex: 1;
     background-color: #2e2e2e; /* cinza escuro */
     padding: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
 }
 
 /*Pagina quizz*/
