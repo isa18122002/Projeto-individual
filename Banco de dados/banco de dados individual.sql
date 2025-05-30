@@ -33,10 +33,4 @@ fkUsuario int,
 foreign key (fkUsuario) references usuario(idUsuario)
 );
 
-select * from quiz;
 
-truncate table usuario;
-
-SELECT acertos 
-        FROM quiz 
-        WHERE fkUsuario = 2;
