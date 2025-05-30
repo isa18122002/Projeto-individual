@@ -128,7 +128,7 @@ function reiniciarQuizz() {
   document.getElementById("next-button").style.display = "none";
 }
 
-// Inicializa o quizz ao carregar a página
+
 window.onload = function () {
   mostrarPergunta();
   document.getElementById("next-button").style.display = "none";
