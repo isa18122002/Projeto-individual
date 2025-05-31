@@ -83,7 +83,7 @@ body {
 
 /*Pagina quizz*/
 .quizz-container {
-  max-width: 600px;
+  width: 40vw;
   margin: 140px auto 40px;
   padding: 30px;
   background-color: #1c1c1c;
