@@ -39,7 +39,7 @@ function validarLogin() {
 
                         setTimeout(function () {
                             window.location = "quizz.html";
-                        }, 1000); // apenas para exibir o loading
+                        }, 1000); 
 
                     });
 
