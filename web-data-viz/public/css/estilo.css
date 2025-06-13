@@ -338,7 +338,7 @@ html {
   gap: 6px;
 }
 
-/* Ícones menores e sem sombra */
+
 .item-rodape img {
   width: 22px;
   height: 22px;
@@ -349,7 +349,7 @@ html {
   object-fit: contain;
 }
 
-/* Texto menor ao lado dos ícones */
+
 .item-rodape span {
   font-size: 13px;
   font-weight: normal;
@@ -357,7 +357,7 @@ html {
 }
 
 
-/*Tela mais assistidos*/ 
+
 
 .mais-assistidos {
   padding: 120px 40px 80px;
@@ -383,7 +383,7 @@ html {
   background-color: #1a1a1a;
   border-radius: 12px;
   box-shadow: 0 0 15px #b30000;
-  width: 280px;
+  width: 240px;
   padding: 15px;
   color: white;
   transition: transform 0.3s;
